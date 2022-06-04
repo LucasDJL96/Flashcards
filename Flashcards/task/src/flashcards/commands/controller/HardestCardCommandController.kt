@@ -17,7 +17,7 @@ object HardestCardCommandController : CommandController {
             return
         }
         val cards = deck.getHardestCards()
-        assert(cards.isNotEmpty())
+        check(cards.isNotEmpty())
         if (cards[0].mistakes == 0) {
             printlnAndLog("There are no cards with errors.")
             return
